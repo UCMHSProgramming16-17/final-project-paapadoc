@@ -8,10 +8,9 @@ import bokeh
 df = pd.read_csv('Pokemon.csv')
 #Import Bar, output_file, save
 from bokeh.charts import Bar, output_file, save
+#Create the Graph file
 output_file("PokeBar.html")
 #Put the data from pokemon.csv into a graph
-PokeBar = Bar(df, 'Type 2', '#', color='Type 2', title="Number of Pokemon per Secondary Type")
-#Create the graph file
-output_file("PokeBar.html")
+PokeBar = Bar(df, 'Type 2', '#',  agg = 'count', title="Number of Pokemon per Secondary Type")
 #Save it as PokeBar
 save(PokeBar)

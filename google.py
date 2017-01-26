@@ -11,6 +11,6 @@ from bokeh.charts import Bar, output_file, save
 #Create the graph file
 output_file("PokemonBar.html")
 #Put the data from pokemon.csv into a graph
-PokemonBar = Bar(df, 'Type 1', '#', color='Type 1', title="Number of Pokemon per Type")
+PokemonBar = Bar(df, 'Type 1', '#', agg='count', title="Number of Pokemon per Type")
 #Save it as PokemonBar
 save(PokemonBar)
